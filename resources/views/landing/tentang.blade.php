@@ -26,8 +26,8 @@
             <img class="img-fluid rounded" src="img/about.jpg">
         </div>
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Tentang Kami</p>
-            <h1 class="display-5 mb-4">Pondok Pesantren  {{$profil->data->name}}</h1>
+            {{-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Tentang Kami</p> --}}
+            <h4 class="display-4 mb-4">{{$profil->data->name}}</h4>
             <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
                 eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
             </p>

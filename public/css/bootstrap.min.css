@@ -460,7 +460,7 @@ progress {
 }
 
 .display-4 {
-    font-size: calc(1.475rem + 2.7vw);
+    font-size: calc(rem + 2.7vw);
     font-weight: 700;
     line-height: 1.2
 }
@@ -7275,7 +7275,7 @@ textarea.form-control-lg {
 }
 
 .mb-4 {
-    margin-bottom: 1.5rem !important
+    margin-bottom: 0.5rem !important
 }
 
 .mb-5 {

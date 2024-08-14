@@ -10,14 +10,18 @@ class PonpesController extends Controller
     public function index()
     {
         $title = 'PP Surabaya || Beranda';
-        $profil = Cache::remember('profil', 3600, function () {
+        $profil = Cache::remember('profil3', 3600, function () {
             return app('App\Helpers\BoardingSchool')->profile();
+        });
+        $album = Cache::remember('album3', 3600, function () {
+            return app('App\Helpers\BoardingSchool')->album();
         });
         // $profil = Cache::get('profil');
         // dd($profil);
         return view('landing.index', [
             'title' => $title,
-            "profil" => $profil
+            "profil" => $profil,
+            "album" => $album
 
         ]);
     }
