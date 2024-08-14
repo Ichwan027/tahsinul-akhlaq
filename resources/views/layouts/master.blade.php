@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,10 +86,10 @@
                         <small class="fab fa-facebook-f text-primary"></small>
                     </a>
                     <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
-                        <small class="fab fa-twitter text-primary"></small>
+                        <small class="fab fa-instagram text-primary"></small>
                     </a>
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
-                        <small class="fab fa-linkedin-in text-primary"></small>
+                    {{-- <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
+                        <small class="fab fa-linkedin-in text-primary"></small> --}}
                     </a>
                 </div>
             </div>
@@ -110,13 +110,13 @@
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$profil->data->email}}</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
+                                class="fab fa-instagram"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
+                                class="fab fa-youtube"></i></a>
+                        {{-- <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a> --}}
                     </div>
                 </div>
                 {{-- <div class="col-lg-3 col-lg-6">
@@ -154,7 +154,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">PP Surabaya</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">Ponpes Surabaya</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->

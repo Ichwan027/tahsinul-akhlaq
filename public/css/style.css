@@ -373,7 +373,7 @@ h6,
 .team-item .team-text {
     position: absolute;
     top: 0;
-    right: 3rem;
+    right: 2rem;
     bottom: 0;
     left: 3rem;
     padding: 15px;
@@ -424,6 +424,61 @@ h6,
 }
 
 .team-item:hover .team-text h4 {
+    color: #FFFFFF;
+}
+
+.team-item .team-social .btn {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.team-item:hover .team-social .btn {
+    background: #FFFFFF;
+}
+
+.team-item .team-social .btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+
+.team-item:hover .team-text {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.team-item .team-text h6 {
+    transition: .5s;
+}
+
+.team-item:hover .team-text h6 {
+    color: #FFFFFF;
+}
+
+.team-item .team-social .btn {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.team-item:hover .team-social .btn {
+    background: #FFFFFF;
+}
+
+.team-item .team-social .btn:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+.team-item:hover .team-text {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.team-item .team-text h6 {
+    transition: .5s;
+}
+
+.team-item:hover .team-text h6 {
     color: #FFFFFF;
 }
 
@@ -565,4 +620,9 @@ h6,
 
 .copyright a:hover {
     color: var(--primary);
+}
+
+.tab-pane {
+    max-height: 200px; /* Sesuaikan ketinggian sesuai kebutuhan Anda */
+    overflow-y: auto;
 }

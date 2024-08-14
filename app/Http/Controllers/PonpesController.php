@@ -25,7 +25,7 @@ class PonpesController extends Controller
     public function tentang()
     {
         $title = 'PP Surabaya || Tentang Kami';
-        $profil = Cache::remember('profil', 3600, function () {
+        $profil = Cache::remember('profil1', 3600, function () {
             return app('App\Helpers\BoardingSchool')->profile();
         });
         $album = Cache::remember('album', 3600, function () {
@@ -94,9 +94,9 @@ class PonpesController extends Controller
 
     public function test()
     {
-        // return app('App\Helpers\BoardingSchool')->profile();
+        return app('App\Helpers\BoardingSchool')->profile();
         // return app('App\Helpers\BoardingSchool')->inbox();
-        return app('App\Helpers\BoardingSchool')->album();
+        // return app('App\Helpers\BoardingSchool')->album();
     }
 
     public function clear()

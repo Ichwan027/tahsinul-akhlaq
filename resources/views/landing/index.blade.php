@@ -141,25 +141,25 @@
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
                 <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <h1 class="display-4 text-white">SD</h1>
-                <span class="fs-5 text-white">Happy Clients</span>
+                <span class="fs-5 text-white">Sekolah Dasar</span>
                 <hr class="bg-white w-25 mx-auto mb-0">
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                <i class="fa fa-check fa-3x text-white mb-3"></i>
+                <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <h1 class="display-4 text-white">SMP</h1>
-                <span class="fs-5 text-white">Projects Completed</span>
+                <span class="fs-5 text-white">Sekolah Menengah Pertama</span>
                 <hr class="bg-white w-25 mx-auto mb-0">
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
+                <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <h1 class="display-4 text-white">SMA</h1>
-                <span class="fs-5 text-white">Dedicated Staff</span>
+                <span class="fs-5 text-white">Sekolah Menengah Keatas</span>
                 <hr class="bg-white w-25 mx-auto mb-0">
             </div>
             <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                <i class="fa fa-award fa-3x text-white mb-3"></i>
+                <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <h1 class="display-4 text-white">SMK</h1>
-                <span class="fs-5 text-white">Awards Achieved</span>
+                <span class="fs-5 text-white">Sekolah Menengah Kejuruan</span>
                 <hr class="bg-white w-25 mx-auto mb-0">
             </div>
         </div>
