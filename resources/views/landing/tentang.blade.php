@@ -8,7 +8,7 @@
     <h1 class="display-3 mb-4 animated slideInDown">Tentang Kami</h1>
     <nav aria-label="breadcrumb animated slideInDown">
         <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+            <li class="breadcrumb-item"><a href="/">Beranda</a></li>
             <li class="breadcrumb-item"><a href="#">Halaman</a></li>
             <li class="breadcrumb-item active" aria-current="page">Tentang Kami</li>
         </ol>

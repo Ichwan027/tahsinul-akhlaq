@@ -23,16 +23,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{asset('lib/animate/animate.min.css')}}" rel="stylesheet">
-    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-    
-    
+    <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-    
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
     <!-- Template Stylesheet -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -48,11 +48,16 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
             <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>{{$profil->data->address}}</small>
+                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>{{ $profil->data->address }}</small>
             </div>
             <div class="col-lg-6 px-5 text-end">
-                <small><i class="fa fa-envelope text-primary me-2"></i>{{$profil->data->email}}</small>
-                <small class="ms-4"><i class="fa fa-phone-alt text-primary me-2"></i>{{$profil->data->phone}}</small>
+                <a href="mailto::{{ $profil->data->email }}" target="_blank" style="color: black;"><small>
+                        <i class="fa fa-envelope text-primary me-2"></i>{{ $profil->data->email }}</small>
+                </a>
+                <a href="https://wa.me/{{ $profil->data->phone }}" target="_blank" style="color: black;"><small
+                        class="ms-4">
+                        <i class="fa fa-phone-alt text-primary me-2"></i>{{ $profil->data->phone }}</small>
+                </a>
             </div>
         </div>
 
@@ -78,15 +83,15 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="404.html" class="dropdown-item">404 Page</a>
                         </div> 
-                    </div>--}}
+                    </div> --}}
                     <a href="{{ route('kontak') }}" class="nav-item nav-link">Kontak</a>
                 </div>
                 <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
-                        <small class="fab fa-facebook-f text-primary"></small>
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="{{ $profil->data->fb }}"
+                        target="_blank"><small class="fab fa-facebook-f text-primary"></small>
                     </a>
-                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
-                        <small class="fab fa-instagram text-primary"></small>
+                    <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="{{ $profil->data->ig }}"
+                        target="_blank"><small class="fab fa-instagram text-primary"></small>
                     </a>
                     {{-- <a class="btn btn-light btn-sm-square rounded-circle ms-3" href="">
                         <small class="fab fa-linkedin-in text-primary"></small> --}}
@@ -97,24 +102,28 @@
     </div>
     <!-- Navbar End -->
 
-        @yield('content')
+    @yield('content')
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-lg-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{$profil->data->address}}</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{$profil->data->phone}}</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{$profil->data->email}}</p>
+                    <h4 class="text-white mb-4">Kantor Sekretariat</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>{{ $profil->data->address }}</p>
+                    <a href="https://wa.me/{{ $profil->data->phone }}" target="_blank" style="color: white;">
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{ $profil->data->phone }}</p>
+                    </a>
+                    <a href="mailto::{{ $profil->data->email }}" target="_blank" style="color: white;">
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ $profil->data->email }}</p>
+                    </a>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="{{ $profil->data->fb }}"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href="{{ $profil->data->ig }}"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2"
+                            href="{{ $profil->data->yt }}" target="_blank"><i class="fab fa-youtube"></i></a>
                         {{-- <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i
                                 class="fab fa-linkedin-in"></i></a> --}}
                     </div>
@@ -129,9 +138,9 @@
                 </div> --}}
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">Tentang Kami</a>
-                    <a class="btn btn-link" href="">Galeri</a>
-                    <a class="btn btn-link" href="">Kontak</a>
+                    <a class="btn btn-link" href="{{ route('tentang') }}">Tentang Kami</a>
+                    <a class="btn btn-link" href="{{ route('album') }}">Galeri</a>
+                    <a class="btn btn-link" href="{{ route('kontak') }}">Kontak</a>
                 </div>
                 {{-- <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Newsletter</h4>
@@ -158,7 +167,8 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://dashboard.ppsunankalijogosby.online">IT Ponpes Surabaya</a>
+                    Designed By <a class="border-bottom" href="https://dashboard.ppsunankalijogosby.online">IT Ponpes
+                        Surabaya</a>
                 </div>
             </div>
         </div>
@@ -174,14 +184,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{asset('lib/wow/wow.min.js')}}"></script>
-    <script src="{{asset('lib/easing/easing.min.js')}}"></script>
-    <script src="{{asset('lib/waypoints/waypoints.min.js')}}"></script>
-    <script src="{{asset('lib/owlcarousel/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('lib/counterup/counterup.min.js')}}"></script>
-                 
-        <!-- Template Javascript -->
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('lib/counterup/counterup.min.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>
