@@ -19,4 +19,5 @@ Route::prefix('example')->controller(ExampleController::class)->group(function (
     Route::get('/profile', 'profile');
     Route::get('/album', 'album');
     Route::get('/album/{uuid}', 'albumShow');
+    Route::get('/employee', 'employee');
 });

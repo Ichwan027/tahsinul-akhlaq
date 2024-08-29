@@ -39,7 +39,7 @@ class BoardingSchool extends Model
         ];
     }
 
-    public function send($method, $endpoint, $body)
+    public function send($method, $endpoint, $body, $attach = [])
     {
         $head = $this->signature($body, $method);
         $header = [
@@ -49,7 +49,23 @@ class BoardingSchool extends Model
             'X-CODE' => $this->code,
         ];
 
-        return Http::withHeaders($header)->$method($this->base . $endpoint, $body)->object();
+        $response = Http::withHeaders($header);
+
+        if ($attach) {
+            try {
+                $filenamewithextension = $attach['photo']->getClientOriginalName();
+                $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+                $response = $response->attach($attach['param'], file_get_contents($attach['photo']), $filename, ['Content-Type' => $attach['contentType']]);
+            } catch (\Exception $e) {
+                return $e->getMessage();
+            }
+        }
+
+        try {
+            return $response->$method($this->base . $endpoint, $body)->object();
+        } catch (\Exception $e) {
+            return $e->getMessage();
+        }
     }
 
     public function profile()
@@ -87,6 +103,24 @@ class BoardingSchool extends Model
     {
         $body = [];
         $endpoint = '/api/album/' . $uuid;
+
+        $response = $this->send('get', $endpoint, $body);
+        return $response;
+    }
+
+    public function alumni()
+    {
+        $body = [];
+        $endpoint = '/api/alumni';
+
+        $response = $this->send('get', $endpoint, $body);
+        return $response;
+    }
+
+    public function employee()
+    {
+        $body = [];
+        $endpoint = '/api/employee';
 
         $response = $this->send('get', $endpoint, $body);
         return $response;

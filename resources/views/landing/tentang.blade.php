@@ -107,76 +107,22 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Pengurus</p>
                 <h1 class="display-5 mb-5">Jajaran Pengurus</h1>
             </div>
             <div class="row g-4">
+                @foreach ($employee->data as $employee)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid rounded" src="{{ $employee->photo }}" alt="">
                         <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
+                            <h6 class="mb-0">{{ $employee->name }}</h6>
                             <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
+                               <h6>{{ $employee->position }}</h6>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-2.jpg" alt="">
-                        <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
-                            <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
-                        <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
-                            <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-1.jpg" alt="">
-                        <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
-                            <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-2.jpg" alt="">
-                        <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
-                            <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid rounded" src="img/team-3.jpg" alt="">
-                        <div class="team-text" style="text-align: center;">
-                            <h6 class="mb-0">Prof. Dr. KH. Muhammad Kholili, S.Pd., M.Pd., M.Eng</h6>
-                            <div class="team-social d-flex">
-                               <h6> Pengasuh Pondok Pesantren </h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 {{-- End Pengasuh--}}
             </div>
         </div>

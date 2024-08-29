@@ -25,20 +25,24 @@
                 <h1 class="display-5 mb-5">Galeri Kami</h1>
             </div>
         </div>
-            @foreach ($album->data as $album)
-            <div class="container">
-                <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="project-item pe-5 pb-5">
-                        <div class="project-img mb-3">
-                            <img class="img-fluid rounded" src="{{ $album->photo }}" alt="">
-                            <a href="{{ route('detail_album') }}"><i class="fa fa-link fa-3x text-primary"></i></a>
-                        </div>
-                        <div class="project-title">
-                            <h4 class="mb-0">{{ $album->album }}</h4>
-                        </div>
-                    </div>
+        @foreach ($album->data as $album)
+        <div class="gallery-container">
+                <div class="gallery">
+                    <a target="_blank" href="{{ $album->photo }}">
+                        <img src="{{ $album->photo }}" alt="Cinque Terre">
+                    </a>
+                    <h4 style="text-align: center;">{{ $album->album }}</h4>
                 </div>
             </div>
+            {{-- <div class="album-container">
+                <div class="album-item mb-3">
+                    <img class="img-fluid rounded" src="{{ $album->photo }}" alt="">
+                    <a href="{{ route('detail_album') }}"><i class="fa fa-link fa-3x text-primary"></i></a>
+                </div>
+                <div class="album-title">
+                    <h4 class="mb-3">{{ $album->album }}</h4>
+                </div>
+            </div> --}}
         @endforeach
     </div>
     </div>

@@ -16,12 +16,18 @@ class PonpesController extends Controller
         $album = Cache::remember('album', 3600, function () {
             return app('App\Helpers\BoardingSchool')->album();
         });
+        $employee = Cache::remember('employee', 3600, function () {
+            return app('App\Helpers\BoardingSchool')->employee();
+        });
         // $profil = Cache::get('profil');
         // dd($profil);
+        // dd($album);
+        // dd($employee);
         return view('landing.index', [
             'title' => $title,
             "profil" => $profil,
-            "album" => $album
+            "album" => $album,
+            "employee" => $employee
 
         ]);
     }
@@ -29,17 +35,22 @@ class PonpesController extends Controller
     public function tentang()
     {
         $title = 'PP Surabaya || Tentang Kami';
-        $profil = Cache::remember('profil1', 3600, function () {
+        $profil = Cache::remember('profil', 3600, function () {
             return app('App\Helpers\BoardingSchool')->profile();
         });
         $album = Cache::remember('album', 3600, function () {
             return app('App\Helpers\BoardingSchool')->album();
         });
+        $employee = Cache::remember('employee1', 3600, function () {
+            return app('App\Helpers\BoardingSchool')->employee();
+        });
         // $profil = Cache::get('profil');
         // dd($album);
+        // dd($employee);
         return view('landing.tentang', [
             'title' => $title,
-            "profil" => $profil
+            "profil" => $profil,
+            "employee" => $employee
 
         ]);
         // return response()->json(['data' => $profil], 200);
