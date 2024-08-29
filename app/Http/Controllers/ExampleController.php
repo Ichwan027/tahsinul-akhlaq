@@ -29,4 +29,10 @@ class ExampleController extends Controller
         $employee = app('App\Helpers\BoardingSchool')->employee();
         return $employee;
     }
+    
+    public function alumni()
+    {
+        $alumni = app('App\Helpers\BoardingSchool')->alumni();
+        return $alumni;
+    }
 }

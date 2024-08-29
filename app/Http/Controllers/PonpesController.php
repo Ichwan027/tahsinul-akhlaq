@@ -19,15 +19,20 @@ class PonpesController extends Controller
         $employee = Cache::remember('employee', 3600, function () {
             return app('App\Helpers\BoardingSchool')->employee();
         });
+        $alumni = Cache::remember('alumni22', 3600, function () {
+            return app('App\Helpers\BoardingSchool')->alumni();
+        });
         // $profil = Cache::get('profil');
         // dd($profil);
         // dd($album);
         // dd($employee);
+        // dd($alumni);
         return view('landing.index', [
             'title' => $title,
             "profil" => $profil,
             "album" => $album,
-            "employee" => $employee
+            "employee" => $employee,
+            "alumni" => $alumni
 
         ]);
     }
@@ -112,6 +117,8 @@ class PonpesController extends Controller
         return app('App\Helpers\BoardingSchool')->profile();
         // return app('App\Helpers\BoardingSchool')->inbox();
         // return app('App\Helpers\BoardingSchool')->album();
+        // return app('App\Helpers\BoardingSchool')->employee();
+        // return app('App\Helpers\BoardingSchool')->alumni();
     }
 
     public function clear()

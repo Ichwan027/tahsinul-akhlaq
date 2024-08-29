@@ -114,10 +114,9 @@
     <!-- Galeri End -->
 
     <!-- Pengurus Start -->
-    <div class="container-xxl py-5">
+    {{-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                {{-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Team</p> --}}
                 <h1 class="display-5 mb-5">Pengurus</h1>
             </div>
             <div class="row g-4">
@@ -138,7 +137,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Pengurus End -->
 
     <!-- Callback Start -->
