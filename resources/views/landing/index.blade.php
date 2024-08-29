@@ -179,7 +179,7 @@
                 @foreach ($album->data as $album)
                     <div class="project-item pe-5 pb-5">
                         <div class="project-img mb-3">
-                            <img class="img-fluid rounded" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid rounded" src="{{ $album->photo }}" alt="Album">
                         </div>
                         <div class="project-title">
                             <h4 class="mb-0">{{ $album->album }}</h4>

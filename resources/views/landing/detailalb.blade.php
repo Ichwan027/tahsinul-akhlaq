@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row g-4 align-items mb-4">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        {{-- <img class="img-fluid rounded" alt="Gambar Album"> --}}
+                        <img class="img-fluid rounded" src="{{ $album->photo }}" alt="Gambar Album">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="border rounded p-4">
@@ -30,7 +30,6 @@
                             <h1 class="display-5 mb-4">{{ $album->album }}</h1>
                             <p class="mb-4">{!! $album->description !!}
                             </p>
-                            <a href="{{ route('album') }}" class="btn btn-primary py-3 px-5 animated slideInDown">Selengkapnya ...</a>
                         </div>
                     </div>
                 </div>
