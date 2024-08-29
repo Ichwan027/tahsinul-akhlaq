@@ -7,6 +7,7 @@ use App\Http\Controllers\PonpesController;
 Route::get('', [PonpesController::class, 'index']);
 Route::get('tentang', [PonpesController::class, 'tentang'])->name('tentang');
 Route::get('album', [PonpesController::class, 'album'])->name('album');
+Route::get('album/{uuid}', [PonpesController::class, 'albumShow'])->name('albumShow');
 Route::get('detail_album', [PonpesController::class, 'detail_album'])->name('detail_album');
 Route::get('kontak', [PonpesController::class, 'kontak'])->name('kontak');
 

@@ -19,28 +19,24 @@
 
     {{-- start --}}
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container mb-5">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 {{-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Projects</p> --}}
-                <h1 class="display-5 mb-5">Galeri Kami</h1>
+                <h1 class="display-5 mb-5">{{ $album->data->album }}</h1>
+                <p>{{ $album->data->description }}</p>
             </div>
         </div>
         <div class="container">
             <div class="row">
-                @foreach ($album->data as $album)
+                @foreach ($album->data->photos as $photo)
                     <div class="col-sm-4 mb-5">
-                        <a href="{{ route('albumShow', $album->uuid) }}" class="text-decoration-none">
-                            <div class="project-item pe-5 pb-5">
-                                <div class="project-img mb-3">
-                                    <div style="width: 100%; height: 220px; overflow: hidden;" class="rounded">
-                                        <img class="img-fluid" src="{{ $album->photo }}" alt="Album">
-                                    </div>
-                                </div>
-                                <div class="project-title">
-                                    <h4 class="mb-0">{{ $album->album }}</h4>
+                        <div class="project-item pe-5 pb-5">
+                            <div class="project-img mb-3">
+                                <div style="width: 100%; height: 220px; overflow: hidden;" class="rounded">
+                                    <img class="img-fluid" src="{{ $photo->photo }}" alt="Album">
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 @endforeach
             </div>

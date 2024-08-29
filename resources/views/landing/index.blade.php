@@ -99,37 +99,15 @@
                 @foreach ($album->data as $album)
                     <div class="project-item pe-5 pb-5">
                         <div class="project-img mb-3">
-                            <img class="img-fluid rounded" src="{{ $album->photo }}" alt="Album">
+                            <div style="width: 100%; height: 220px; overflow: hidden;" class="rounded">
+                                <img class="img-fluid" src="{{ $album->photo }}" alt="Album">
+                            </div>
                         </div>
                         <div class="project-title">
                             <h4 class="mb-0">{{ $album->album }}</h4>
                         </div>
                     </div>
                 @endforeach
-                {{-- <div class="project-item pe-5 pb-5">
-                <div class="project-img mb-3">
-                    <img class="img-fluid rounded" src="img/service-2.jpg" alt="">
-                </div>
-                <div class="project-title">
-                    <h4 class="mb-0">Cash Investment</h4>
-                </div>
-            </div>
-            <div class="project-item pe-5 pb-5">
-                <div class="project-img mb-3">
-                    <img class="img-fluid rounded" src="img/service-3.jpg" alt="">
-                </div>
-                <div class="project-title">
-                    <h4 class="mb-0">Financial Consultancy</h4>
-                </div>
-            </div>
-            <div class="project-item pe-5 pb-5">
-                <div class="project-img mb-3">
-                    <img class="img-fluid rounded" src="img/service-4.jpg" alt="">
-                </div>
-                <div class="project-title">
-                    <h4 class="mb-0">Business Loans</h4>
-                </div>
-            </div> --}}
             </div>
         </div>
     </div>
@@ -146,7 +124,9 @@
                 @foreach ($employee->data as $employee)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="team-item">
-                            <img class="img-fluid rounded" src="{{ $employee->photo }}" alt="">
+                            <div style="height: 250px; overflow: hidden;" class="rounded">
+                                <img class="img-fluid" src="{{ $employee->photo }}" alt="">
+                            </div>
                             <div class="team-text">
                                 <h6 class="mb-0">{{ $employee->name }}</h6>
                                 <div class="team-social d-flex">
@@ -229,7 +209,8 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
+                        lorem
                         lorem magna ut et, nonumy et labore et tempor diam tempor erat.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-1.jpg" alt="">
@@ -241,7 +222,8 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
+                        lorem
                         lorem magna ut et, nonumy et labore et tempor diam tempor erat.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-2.jpg" alt="">
@@ -253,7 +235,8 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
+                        lorem
                         lorem magna ut et, nonumy et labore et tempor diam tempor erat.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-3.jpg" alt="">
@@ -265,7 +248,8 @@
                         <div class="btn-square bg-white border rounded-circle">
                             <i class="fa fa-quote-right fa-2x text-primary"></i>
                         </div>
-                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
+                        Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At
+                        lorem
                         lorem magna ut et, nonumy et labore et tempor diam tempor erat.
                     </div>
                     <img class="rounded-circle mb-3" src="img/testimonial-4.jpg" alt="">

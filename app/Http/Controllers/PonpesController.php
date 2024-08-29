@@ -122,4 +122,21 @@ class PonpesController extends Controller
         ], 200);
         // return 'Cache sudah dihapus';
     }
+
+    public function albumShow($uuid)
+    {
+        $album = Cache::remember('album' . $uuid, 3600, function () use ($uuid) {
+            return app('App\Helpers\BoardingSchool')->albumShow($uuid);
+        });
+
+        $profil = Cache::remember('profil', 3600, function () {
+            return app('App\Helpers\BoardingSchool')->profile();
+        });
+
+        return view('landing.album-show', [
+            'title' => 'PP Surabaya || Detail Album',
+            'album' => $album,
+            'profil' => $profil
+        ]);
+    }
 }
