@@ -141,58 +141,7 @@
     <!-- Pengurus End -->
 
     <!-- Callback Start -->
-    <div class="container-fluid callback my-5 pt-5">
-        <div class="container pt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="bg-white border rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                            {{-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Hubungi Kami
-                        </p> --}}
-                            <h1 class="display-5 mb-5">Hubungi Kami</h1>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name"
-                                        placeholder="Nama Lengkap">
-                                    <label for="name">Nama Lengkap</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="mail" placeholder="Email Anda">
-                                    <label for="mail">Email</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="mobile"
-                                        placeholder="Nomor Telepon Anda">
-                                    <label for="mobile">Nomor Telepon</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subjek</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Pesan</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Kirim Sekarang</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Callback End -->
 
     <!-- Alumni Start -->
@@ -219,6 +168,8 @@
                 @endforeach
             </div>
         </div>
+        <a href="{{ route('tentang') }}" class="btn btn-primary py-3 px-5 animated slideInDown">Selengkapnya
+                            ...</a>
     </div>
     <!-- Alumni End -->
 
