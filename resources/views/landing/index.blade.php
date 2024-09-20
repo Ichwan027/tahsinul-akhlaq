@@ -140,10 +140,6 @@
     </div> --}}
     <!-- Pengurus End -->
 
-    <!-- Callback Start -->
-    
-    <!-- Callback End -->
-
     <!-- Alumni Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -168,8 +164,10 @@
                 @endforeach
             </div>
         </div>
-        <a href="{{ route('tentang') }}" class="btn btn-primary py-3 px-5 animated slideInDown">Selengkapnya
-                            ...</a>
+    </div>
+    <div style="text-align: center;">
+    <a href="https://dashboard.ppsunankalijogosby.online/remaja/tahsinul-akhlaq-bahrul-ulum/inbox" 
+    class="btn btn-primary py-3 px-5 animated slideInDown" >Kirim Masukan Untuk Kami</a>
     </div>
     <!-- Alumni End -->
 
