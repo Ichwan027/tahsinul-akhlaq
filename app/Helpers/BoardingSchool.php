@@ -81,7 +81,7 @@ class BoardingSchool extends Model
     {
         $body = [
             "name" => "udin222",
-            "email" => "udin@mail.com",
+            "email" => "ichwanm888@gmail.com",
             "message" => "abcnas"
         ];
         $endpoint = '/api/inbox';

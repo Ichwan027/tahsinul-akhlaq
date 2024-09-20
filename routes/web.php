@@ -2,19 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
-use App\Http\Controllers\PonpesController;
+use App\Http\Controllers\Ponpes1Controller;
 
-Route::get('', [PonpesController::class, 'index']);
-Route::get('tentang', [PonpesController::class, 'tentang'])->name('tentang');
-Route::get('album', [PonpesController::class, 'album'])->name('album');
-Route::get('album/{uuid}', [PonpesController::class, 'albumShow'])->name('albumShow');
-Route::get('detail_album', [PonpesController::class, 'detail_album'])->name('detail_album');
-Route::get('kontak', [PonpesController::class, 'kontak'])->name('kontak');
+Route::get('', [Ponpes1Controller::class, 'index']);
+Route::get('tentang', [Ponpes1Controller::class, 'tentang'])->name('tentang');
+Route::get('album', [Ponpes1Controller::class, 'album'])->name('album');
+Route::get('album/{uuid}', [Ponpes1Controller::class, 'albumShow'])->name('albumShow');
+Route::get('detail_album', [Ponpes1Controller::class, 'detail_album'])->name('detail_album');
+Route::get('kontak', [Ponpes1Controller::class, 'kontak'])->name('kontak');
 
 
-Route::get('test', [PonpesController::class, 'test']);
+Route::get('test', [Ponpes1Controller::class, 'test']);
 
-Route::get('clear', [PonpesController::class, 'clear']);
+Route::get('clear', [Ponpes1Controller::class, 'clear']);
 
 Route::prefix('example')->controller(ExampleController::class)->group(function () {
     Route::get('/profile', 'profile');

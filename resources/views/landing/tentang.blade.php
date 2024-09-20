@@ -21,16 +21,17 @@
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
+            
+            {{-- @foreach ($album->data as $album) --}}
             <div class="row g-4 align-items-end mb-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <img class="img-fluid rounded" src="img/about.jpg">
                 </div>
+                
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     {{-- <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Tentang Kami</p> --}}
                     <h4 class="display-4 mb-4">{{ $profil->data->name }}</h4>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                    </p>
+                    <p class="mb-4">{!! $profil->data->about !!}</p>
                     <div class="border rounded p-4">
                         <nav>
                             <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
@@ -42,7 +43,7 @@
                                     aria-selected="false">Misi</button>
                                 <button class="nav-link fw-semi-bold" id="nav-vision-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-vision" type="button" role="tab" aria-controls="nav-vision"
-                                    aria-selected="false">Fasilitas</button>
+                                    aria-selected="false">Sejarah</button>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
@@ -54,13 +55,13 @@
                                 {!! $profil->data->mission !!}
                             </div>
                             <div class="tab-pane fade" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
-                                {!! $profil->data->facility !!}
+                                {!! $profil->data->history !!}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            {{-- @endforeach --}}
         </div>
     </div>
     <!-- About End -->
