@@ -10,16 +10,16 @@ class Ponpes1Controller extends Controller
     public function index()
     {
         $title = 'PP Surabaya || Beranda';
-        $profil = Cache::remember('profil1', 3600, function () {
+        $profil = Cache::remember('profil', 3600, function () {
             return app('App\Helpers\BoardingSchool')->profile();
         });
-        $album = Cache::remember('album1', 3600, function () {
+        $album = Cache::remember('album', 3600, function () {
             return app('App\Helpers\BoardingSchool')->album();
         });
-        $employee = Cache::remember('employee1', 3600, function () {
+        $employee = Cache::remember('employee', 3600, function () {
             return app('App\Helpers\BoardingSchool')->employee();
         });
-        $alumni = Cache::remember('alumni2', 3600, function () {
+        $alumni = Cache::remember('alumni', 3600, function () {
             return app('App\Helpers\BoardingSchool')->alumni();
         });
         // $profil = Cache::get('profil');

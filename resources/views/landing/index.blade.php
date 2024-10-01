@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row g-4 align-items mb-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded" src="img/about.jpg">
+                    <img class="img-fluid rounded" src="img/about1.jpg">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="border rounded p-4">
